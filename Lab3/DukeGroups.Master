@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DukeGroups.master.cs" Inherits="Lab_1_.DukeGroups" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Ole School</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+<style type="text/css">
+        #OrgName{
+            color: mediumpurple;
+            font-weight:700;
+            background-color:silver;
+            border:none;
+            margin-left: 2px;
+        }
+        body{
+            background-color: silver;
+        }
+        #bttnHome, #bttnMission, #bttnEvent, #bttnWinner, #bttnDonate, #bttnContact{
+            color:mediumpurple;
+            background-color: black;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        #Bttns{
+            background-color: white;
+            border-color:black;
+            height:10%;
+            border-style:groove;
+        }
+    </style>
+</head>
+<body>
+    <form id="OverView" runat="server">
+        <div>
+            <asp:ImageButton ID="HomePage" runat="server" src="OleSchool.png" Onclick="HomePage_Click"/>
+                    <div id="Bttns">
+            <asp:Button ID="bttnHome" runat="server" Text="Home" Onclick="bttnHome_Click" CausesValidation="false"/>
+
+            <asp:Button ID="bttnMission" runat="server" Text="Mission" Onclick="bttnMission_Click" CausesValidation="false"/>
+
+            <asp:Button ID="bttnEvent" runat="server" Text="Events" Onclick="bttnEvent_Click" CausesValidation="false"/>
+
+            <asp:Button ID="bttnWinner" runat="server" Text="Award Winners" Onclick="bttnWinner_Click" CausesValidation="false"/>
+
+            <asp:Button ID="bttnDonate" runat="server" Text="Donations" Onclick="bttnDonate_Click" CausesValidation="false"/>
+
+            <asp:Button ID="bttnContact" runat="server" Text="Contact Us" Onclick="bttnContact_Click" CausesValidation="false"/>
+                        
+
+
+                         <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblUserStatus" runat="server" Text=""></asp:Label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="Logout" runat="server" OnClick="Logout_Click" Text="Logout" CausesValidation="false" />
+                        <asp:Button ID="Login" runat="server" OnClick="Login_Click" Text="Login" CausesValidation="false" />
+                         <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="bttnDash" runat="server" Text="Dashboard" Onclick="bttnDash_Click" CausesValidation="false"/>
+&nbsp;&nbsp;</div>
+                        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        
+            </div>
+    </form>
+</body>
+</html>
+
